@@ -74,12 +74,12 @@ const SignIn=()=>{
 
             <div className="col-md-6 card shadow">
 
-                <h1>Sign In</h1>
+                <h1 className="p-2 m-2">Sign In</h1>
 
                 <form action="" onSubmit={submit}>
 
                     <p className="text-warning">{loading}</p>
-                    <p className="text success">{success}</p>
+                    <p className="text-success">{success}</p>
                     <p className="text-danger">{error}</p>
 
                     <input type="text" placeholder="Enter your email" className="form-control" value={email} onChange={(e)=>setEmail(e.target.value)}required/>

@@ -61,7 +61,7 @@ const SignUp=()=>{
 
             <div className="col-md-6 card shadow" >
 
-                <h1>Sign Up</h1>
+                <h1 className="p-2 m-2">Sign Up</h1>
 
 
                 <form action="" onSubmit={submit} >
@@ -72,11 +72,14 @@ const SignUp=()=>{
 
                     <input type="text" placeholder="Enter your username" className="form-control" value={username} onChange={(e)=>setUsername(e.target.value)} required/>
                     <br />
+                    <br />
                     
                     <input type="email" placeholder="Enter email" className="form-control" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
                     <br />
+                    <br />
                     
                     <input type="tel" placeholder="Enter phone number" className="form-control" value={phone} onChange={(e)=>setPhone(e.target.value)} required/>
+                    <br />
                     <br />
                     
                     <input type="text" placeholder="Enter your password" className="form-control"value={password} onChange={(e)=>setPassword(e.target.value)} required/>
