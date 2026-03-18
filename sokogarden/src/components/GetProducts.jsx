@@ -1,12 +1,17 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 
 const GetProducts=()=>{
 
     const[loading,setLoading]=useState("")
     const[error,setError]=useState("")
     const[products,setProducts]=useState([])
+
+
+
+    const navigate=useNavigate()
 
     // Variable to store image
 
@@ -67,7 +72,9 @@ const GetProducts=()=>{
                     <p className="text-success">{product.product_name}</p>
                     <p className="text-secondary">{product.product_description}</p>
                     <p className="text-warning">Ksh {product.product_cost}</p>
-                    <input type="button" className=" btn btn-secondary w-100"  value="Make payment"/>
+
+                    <input type="button" className=" btn btn-secondary w-100"  value="Purchase now" onClick={()=>navigate("/mpesa",{state:{product}})}/>
+
                 </div>
 
                 </div>
